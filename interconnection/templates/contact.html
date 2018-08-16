@@ -1,20 +1,22 @@
-        {% extends 'base.html' %}
-		{% block content %}
+{% extends 'base.html' %}
+{% block content %}
 
-		<table class="table table-striped">
-			<tr>
-				<th>Name</th>
-				<th>Phone Number</th>
-				<th>District</th>
-			</tr>
-            {% for contact in contactAll %}
-            <tr>
-                <td>{{ contact.name }}</td>
-                <td>{{ contact.phone }}</td>
-                <td>{{ contact.district }}</td>
-            </tr>
-            {% endfor %}
-        </table>
-        <a class="btn btn-primary" href=" {% url 'addContact' %}">Add New Contact</a>
+<table class="table table-striped">
+	<tr>
+		<th>ID</th>
+		<th>Name</th>
+		<th>Phone Number</th>
+		<th>District</th>
+	</tr>
+	{% for contact in contactAll %}
+	<tr>
+		<td>{{ contact.id }}</td>
+		<td>{{ contact.name }}</td>
+		<td>{{ contact.phone }}</td>
+		<td>{{ contact.district }}</td>
+	</tr>
+	{% endfor %}
+</table>
+<a class="btn btn-primary" href=" {% url 'addContact' %}">Add New Contact</a>
 
-        {% endblock %}
+{% endblock %}

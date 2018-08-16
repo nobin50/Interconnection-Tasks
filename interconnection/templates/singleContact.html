@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<table class="table table-striped">
+<tr>
+	<th>ID</th>
+	<th>Name</th>
+	<th>Phone Number</th>
+	<th>District</th>
+</tr>
+<tr>
+	<td>{{ individualContact.id }}</td>
+	<td>{{ individualContact.name }}</td>
+	<td>{{ individualContact.phone }}</td>
+	<td>{{ individualContact.district }}</td>
+	<td>
+		<a class = "btn btn-primary" href="edit/">Edit</a>
+		<a class = "btn btn-danger" href="delete/">Delete</a>
+	</td>
+</tr>
+</table>
+
+{% endblock %}
