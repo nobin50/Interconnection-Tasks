@@ -1,0 +1,13 @@
+
+<div>
+    <h1>All List</h1>
+    <button ui-sref="add-todo" class='btn btn-primary btn-lg' style='margin-bottom:20px;'>Add Todo</button>
+
+		<ul class="list-group">
+			<li ng-repeat='todo in todos' ng-class="{completed: todo.is_completed}" class="list-group-item">
+
+				<span class='badge' ng-click="deleteTodo(todo.id)">X</span>
+			</li>
+		</ul>
+
+</div>
